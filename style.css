@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&family=Yusei+Magic&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    display: flex;
+    background-color: rgba(20, 20, 20, 0.815);
+    color: rgb(255, 255, 255);  
+}
+
+#navbar{
+    min-width: 15%;
+    height: 85%;
+    width: 300px;
+    position: fixed;
+    font-family: 'Noto Sans KR', sans-serif;
+    padding: 10px 10px 0px 15px;
+}
+#navbar header{
+    text-align: center;
+    background-color:#b3b3b3a9;
+}
+header{
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Yusei Magic', sans-serif;
+}
+@media(max-width:800px){
+    header{
+        font-size: 22px;
+    }
+}
+
+#navbar ul{
+    overflow-y: auto;
+    overflow-x: hidden; 
+    margin:10px 0px;
+    font-size: 18px;  
+    height: 100%;
+    scrollbar-color: rgb(22,22,22,0.8) #fff;
+    scrollbar-width: thin;
+}
+
+/*Diseño de scroll para otros navegadores ya que firefox no soporta la pseudoclase --webkit-scrollbar*/
+#navbar ul::-webkit-scrollbar {
+    width: 8px;     /* Tamaño del scroll en vertical */
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+#navbar ul::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+#navbar ul::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.8);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+#navbar ul::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+}
+
+
+#navbar li{
+    margin: 0px;
+    border-top: 1px solid white;
+    list-style: none;
+}
+
+.nav-link{
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+#navbar ul li:hover{
+    background-color: #000;
+    animation-name: animation-bar;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animation-bar{
+    0%{
+        left: 0px;
+    }
+    100%{
+        left: 10px;
+
+        padding: 5px 5px 0px 10px;
+    }
+}
+
+#main-doc{
+    margin-left: 320px;
+    padding: 10px 30px;
+    
+}
+
+#main-doc section{
+    padding: 10px 0px;
+}
+section article {
+    margin: 10px;
+    font-size: 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+}
+
+@media(max-width:800px){
+    section article{
+        font-size: 14px;
+    }
+}
+
+section li {
+    margin: 0px 0px 0px 20px;
+}
+article>ul{
+    margin-top: 12px;
+}
+p{
+    padding-top: 15px;
+}
+code{
+    background: #666;
+    border: 1px solid #666;
+    border-left: 5px solid #f36d33;
+    color: #fff;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-top: 1.6em;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}
+
+@media(max-width:800px){
+    body{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    #navbar ul {
+        max-height: 207px;
+        font-size: 14px;
+      }
+    #navbar{
+        position: absolute;
+        top: 0px;
+        width: 90%;
+        max-height: 250px;
+    }
+    #main-doc {
+        position: relative;
+        margin-left: 0px;
+        margin-top: 270px;
+    }
+}
