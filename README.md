@@ -1,3 +1,3 @@
 # Technical-Documentation-Page-Challenge
 This is another freecodecamp challenge
-(./Preview.png)
+[Design preview for the Technical Documentation Page](./Preview.png)
